@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="login-mode">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,10 +16,10 @@
             <nav>
                 <ul class="navlist">
                     <li>
-                        <button class="navbutton active">LOGIN</button>
+                        <button class="navbutton active" id="login-form-button">LOGIN</button>
                     </li>
                     <li>
-                        <button class="navbutton">REGISTER</button>
+                        <button class="navbutton" id="signup-form-button">REGISTER</button>
                     </li>
                 </ul>
             </nav>
@@ -35,18 +35,44 @@
                     </div>
                     <div class="column-container column-right">
                         <div class="form-wrapper">
-                            <form>
+                            <form id="login-form">
                                 <h1 class="form-title">Login</h1>
                                 <div class="form-unit">
-                                    <label for="username">Username</label>
-                                    <input type="text" id="username" placeholder="Username" required>
+                                    <label for="login-username">Username</label>
+                                    <input type="text" id="login-username" placeholder="Username" required>
                                 </div>
                                 <div class="form-unit">
-                                    <label for="password">Password</label>
-                                    <input type="password" id="password" placeholder="Password" required>
+                                    <label for="login-password">Password</label>
+                                    <input type="password" id="login-password" placeholder="Password" required>
                                 </div>
                                 <div class="form-unit">
-                                    <input type="submit" class="submit-button" value="Login">
+                                    <input type="submit" id="login-submit-button" class="submit-button" value="Login">
+                                </div>
+                            </form>
+                            <form id="signup-form" class="hidden-form">
+                                <h1 class="form-title">Register</h1>
+                                <div class="form-unit">
+                                    <label for="first-name">First Name</label>
+                                    <input type="text" id="first-name" placeholder="First Name" required>
+                                </div>
+                                <div class="form-unit">
+                                    <label for="last-name">Last Name</label>
+                                    <input type="text" id="last-name" placeholder="Last Name" required>
+                                </div>
+                                <div class="form-unit">
+                                    <label for="signup-username">Username</label>
+                                    <input type="text" id="signup-username" placeholder="Username" required>
+                                </div>
+                                <div class="form-unit">
+                                    <label for="signup-password">Password</label>
+                                    <input type="password" id="signup-password" placeholder="Password" required>
+                                </div>
+                                <div class="form-unit">
+                                    <label for="signup-password-confirm">Confirm Password</label>
+                                    <input type="password" id="signup-password-confirm" placeholder="Confirm Password" required>
+                                </div>
+                                <div class="form-unit">
+                                    <input type="submit" id="signup-submit-button" class="submit-button" value="Sign Up">
                                 </div>
                             </form>
                         </div>
@@ -54,5 +80,6 @@
                 </div>
             </div>
         </main>
+        <script src="./form-toggle.js"></script>
     </body>
 </html>

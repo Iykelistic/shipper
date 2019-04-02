@@ -1,5 +1,9 @@
-html {
+.login-mode {
     height: 100%;
+}
+
+.register-mode {
+    min-height: 100%;
 }
 
 body {
@@ -100,7 +104,7 @@ main {
     animation-name: fade-in;
     -webkit-animation-name: fade-in;
     animation-duration: 2s;
-    -webkit-animation-duration: 4s;
+    -webkit-animation-duration: 2s;
     margin: 10px;
 }
 
@@ -135,6 +139,32 @@ form {
     background-color: rgba(232, 234, 246, 0.5);
     border-radius: 5px;
     box-shadow: rgba(0,0,0,0.5) 1px 1px 2px 0px, rgba(0,0,0,0.2) 2px 2px 5px 2px;
+    animation-name: form-fade-in;
+    -webkit-animation-name: form-fade-in;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+}
+
+@keyframes form-fade-in {
+    from {
+        background-color: rgba(232, 234, 246, 0);
+    }
+    to {
+        background-color: rgba(232, 234, 246, 0.5);
+    }
+}
+
+@-webkit-keyframes form-fade-in {
+    from {
+        background-color: rgba(232, 234, 246, 0);
+    }
+    to {
+        background-color: rgba(232, 234, 246, 0.5);
+    }
+}
+
+.hidden-form {
+    display: none;
 }
 
 .form-title {
